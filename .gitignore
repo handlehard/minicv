@@ -1,0 +1,6 @@
+*vcxproj*
+Debug/
+#libpng/
+#zlib/
+#easybmp/
+picture/
