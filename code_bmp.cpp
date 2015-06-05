@@ -100,7 +100,7 @@ bool BmpEncoder::write(const Mat& img) {
 	bmp.SetSize(width, height);
 
 	uchar* p_data = img.data_;
-	bmp.SetBitDepth(24);
+	
 
 	if (img.channels() == 1) {
 		
@@ -113,6 +113,8 @@ bool BmpEncoder::write(const Mat& img) {
 				bmp.SetPixel(j, i, pix_tmp);
 			}
 		}
+		
+		bmp.SetBitDepth(24);
 	}
 	else {
 		
@@ -128,7 +130,7 @@ bool BmpEncoder::write(const Mat& img) {
 				bmp.SetPixel(j, i, pix_tmp);
 			}
 		}
-
+		bmp.SetBitDepth(24);
 	}
 	bmp.WriteToFile(filename_.c_str());
 

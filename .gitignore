@@ -4,3 +4,5 @@ Debug/
 #zlib/
 #easybmp/
 picture/
+test_result/
+test_pic/

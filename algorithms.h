@@ -4,6 +4,8 @@
 #include "mcv_types.h"
 #include "mat.hpp"
 
+#include <ctime>
+#include <iostream>
 
 _MCV_START_
 
@@ -13,7 +15,7 @@ _MCV_START_
 
 
 #ifdef TIME_MACRO
-#include <ctime>
+
 #define START_TIME clock_t __start_time_, __end_time_; __start_time_ = clock();
 #define PRINT_TIME(word) __end_time_ = clock(); \
 	std::cout << word << " costs " << ": \t" << \
@@ -39,6 +41,7 @@ void CompressGray(const Mat& img, Mat& saved_img, double c = 20);
 
 int Smooth(const Mat& img, Mat& saved_img, SMOOTH_TYPE smooth_type);
 
+int SmoothNosse(const Mat& img, Mat& saved_img, SMOOTH_TYPE smooth_type);
 
 _MCV_END_
 

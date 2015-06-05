@@ -6,11 +6,13 @@
 
 #include <emmintrin.h>  //sse2
 
-#include "algorithms.h"
-
 //#define DEBUG
 //#define TIME_MACRO
-///#define MAGNIFY
+
+#include "algorithms.h"
+
+
+#define MAGNIFY
 
 
 _MCV_START_
@@ -87,7 +89,7 @@ inline void SmUi2M128i(__m128i* p_mn, unsigned int data_) {
 	img.data_[(i)*img.cols_ + j + 1], img.data_[(i)*img.cols_ + j + 1], \
 	img.data_[(i)*img.cols_ + j + 0])
 
-//smooth waiting debug
+
 int Smooth(const Mat& img, Mat& saved_img, SMOOTH_TYPE smooth_type)
 {
 	START_TIME;
@@ -294,7 +296,7 @@ int SmoothNosse(const Mat& img, Mat& saved_img, SMOOTH_TYPE smooth_type)
 #ifdef MAGNIFY
 	}
 #endif	// MAGNIFY
-	PRINT_TIME("smooth not with sse");
+	PRINT_TIME("smoothNosse");
 	return 0;
 }
 

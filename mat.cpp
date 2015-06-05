@@ -156,6 +156,11 @@ uchar* Mat::ptr(int i) {
 	return data_ + i*cols_*channels();
 }
 
+uchar* Mat::ptr(int i) const{
+	return data_ + i*cols_*channels();
+}
+
+
 template <class T>
 T* Mat::ptr(int i = 0) {
 	return (T*)data_ + i*cols_*channels();

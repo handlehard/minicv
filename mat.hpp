@@ -30,6 +30,7 @@ public:
 
 
 	uchar* ptr(int i = 0);
+	uchar* ptr(int i = 0) const;
 
 	template <class T>
 	T* ptr(int i);

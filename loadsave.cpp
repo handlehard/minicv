@@ -20,8 +20,6 @@ struct ImageCodecInitializer {
 		decoders.push_back(makePtr<PngDecoder>());
 		encoders.push_back(makePtr<PngEncoder>());
 #endif
-
-
 	}
 
 	std::vector<ImageDecoder> decoders;
